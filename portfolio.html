@@ -17,13 +17,13 @@
 
             <ul class="horizontal-list text-center nav-menu">
                 <li>
-                    <a href="#"> Home </a>
+                    <a href="#" onclick="smoothScroll()"> Home </a>
                 </li>
                 <li>
-                    <a href="#about"> About </a>
+                    <a href="#about" onclick="smoothScroll()"> About </a>
                 </li>
                 <li>
-                    <a href="#skills"> Skills </a>
+                    <a href="#skills" onclick="smoothScroll()"> Skills </a>
                 </li>
                 <li>
                     <a href="#experience">Experience</a>
@@ -40,7 +40,9 @@
             </ul>
             <div class="nav-bar-container nav-res">
                 <div class="inside-nav1">
-                    <img src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png" alt="nav-menu" id="nav-icon" onclick="showNavMenu()">
+                    <!-- <img src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png" > -->
+                    
+                    <img src="https://img.icons8.com/ios-filled/25/ffffff/menu--v1.png"/ alt="nav-menu" id="nav-icon" onclick="showNavMenu()">
                 </div>
                 
                 <div class="inside-nav2 " id="inside-nav2-res">
@@ -81,23 +83,34 @@
                     <div class="icon-container text-center">
                         <li>
                             <a href="https://www.linkedin.com/in/m-sulthan-a0b2541b5/">
-                                <i class="fab fa-linkedin-in"></i>
+                                <i>
+                                    <img src="https://img.icons8.com/external-justicon-flat-justicon/30/000000/external-linkedin-social-media-justicon-flat-justicon.png"/>
+                                </i>
+                               
                             </a>
                         </li>
                       
                         <li>
                             <a href="https://github.com/sulthanm">
-                                <i class="fab fa-github"></i>
+                                <i>
+                                    <img src="https://img.icons8.com/color/30/000000/github--v1.png"/>
+                                </i>
                             </a>
                         </li>
                         <li>
                             <a href="https://www.hackerrank.com/sulthanso73/">
-                                <i class="fab fa-hackerrank"></i>
+                                <i>
+                                    <img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/30/000000/external-hackerrank-is-a-technology-company-that-focuses-on-competitive-programming-logo-shadow-tal-revivo.png"/>
+                                </i>
+                                
                             </a>
                         </li>
                         <li>
                             <a href="https://auth.geeksforgeeks.org/user/sulthanso73/profile">
-                                <i ><img class="geek-img" src="./images/geeksforgeeks.svg"/></i>
+                                <i>
+                                    <img id="geek-icon" src="./images/gfg.jpg"/>
+                                </i>
+                                
                             </a>
                         </li>
                     </div>

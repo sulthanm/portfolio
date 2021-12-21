@@ -45,18 +45,34 @@ navButton.addEventListener('click', function(){
         bodyHead.style.height = "115vh";
         socialContainer.style.marginTop = "65vh";
         listNav.style.display = "block";
-        listNav.style.transition = "all 2s";
-        navButton.setAttribute("src", "https://img.icons8.com/material-outlined/24/000000/delete-sign.png"); 
+        navButton.setAttribute("src", "https://img.icons8.com/ios/25/000000/delete-sign--v2.png"); 
         check=false;
 
     }else{
         bodyHead.style.height = "65vh";
         socialContainer.style.marginTop = "18vh";
         listNav.style.display = "none";
-        navButton.setAttribute("src", "https://img.icons8.com/material-outlined/24/000000/menu--v1.png"); 
+        navButton.setAttribute("src", "https://img.icons8.com/ios-filled/25/ffffff/menu--v1.png"); 
         check=true;
     }
 })
 
 // -------------------------------------Handling Smooth Scroll----------------------------------
-var skillsLength = document.getElementById('skills')
+
+function smoothScroll(){
+
+    var skills = document.getElementById('skills');
+    var skillsLength = skills.getBoundingClientRect();;
+    var temp = 0;
+    
+    function scroll(){
+        window.scrollBy(temp,30);
+        if(temp >= skillsLength){
+            clearInterval(scrollInterval);
+        }
+        temp += 30;
+    }
+    var scrollInterval = setInterval(scroll, 100)
+}
+
+
