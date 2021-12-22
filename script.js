@@ -3,8 +3,6 @@ var v = document.getElementById('skills');
         window.onscroll = (() => {
                 let rect = v.getBoundingClientRect();
                 let y = rect.y;
-                console.log(y);
-                
                 if(y<=150){
                     $("#jQ-67").css({
                         "width"  : '67%',"transition" : "1s"
@@ -59,20 +57,21 @@ navButton.addEventListener('click', function(){
 
 // -------------------------------------Handling Smooth Scroll----------------------------------
 
-function smoothScroll(){
+function smoothScroll(event, section){
+    event.preventDefault();
+    var id = section.id;
 
-    var skills = document.getElementById('skills');
-    var skillsLength = skills.getBoundingClientRect();;
+    var skills = document.getElementById(id);
+    var skillsLength = skills.getBoundingClientRect();
     var temp = 0;
-    
+    var height = skillsLength.y;
+    console.log(skillsLength);
     function scroll(){
-        window.scrollBy(temp,30);
-        if(temp >= skillsLength){
+        window.scrollBy(temp,50);
+        if(temp >= height){
             clearInterval(scrollInterval);
         }
-        temp += 30;
+        temp += 65;
     }
-    var scrollInterval = setInterval(scroll, 100)
+    var scrollInterval = setInterval(scroll, 100);
 }
-
-
